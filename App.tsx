@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /**
  * Sample React Native App
@@ -18,8 +19,8 @@ import {
   View,
 } from 'react-native';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
-
+import { Colors } from 'react-native/Libraries/NewAppScreen';
+import ProductScreen from '../MyApp/src/screens/ProductScreen/ProductScreen';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const App = () => {
@@ -33,7 +34,7 @@ const App = () => {
     <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <View>
-        <Text>Hello World</Text>
+        <ProductScreen />
       </View>
     </SafeAreaView>
   );
