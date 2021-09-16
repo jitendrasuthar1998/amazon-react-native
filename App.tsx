@@ -22,7 +22,10 @@ import {
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import ProductScreen from '../MyApp/src/screens/ProductScreen/ProductScreen';
 import Icon from 'react-native-vector-icons/FontAwesome';
-
+import ShoppingCartScreen from './src/screens/ShoppingCartScreen/shoppingCart';
+import CartProductItem from './src/components/CartProductItem/CartProductItemComponent';
+import HomeScreen from './src/screens/HomeScreen';
+import AddressScreen from './src/screens/AddressScreen/index';
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -31,10 +34,10 @@ const App = () => {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+    <SafeAreaView style={ backgroundStyle }>
+      <StatusBar barStyle={ isDarkMode ? 'light-content' : 'dark-content' } />
       <View>
-        <ProductScreen />
+        <AddressScreen />
       </View>
     </SafeAreaView>
   );
