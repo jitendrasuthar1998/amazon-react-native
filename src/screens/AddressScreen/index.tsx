@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput } from 'react-native';
+import { View, Text, TextInput, Alert } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import styles from '../AddressScreen/styles';
 import countryList from 'country-list'
-
+import Button from '../../components/Button/button';
 const countries = countryList.getData();
 console.log( countries )
 const AddressScreen = () => {
@@ -17,11 +17,41 @@ const AddressScreen = () => {
   const [ address, setAddress ] = useState( '' );
 
   const [ city, setCity ] = useState( '' );
+
+  const [ addressError, setAddressError ] = useState( '' );
+
   // console.log( country )
 
   console.log( fullName )
   console.log( phone )
 
+  const onCheckout = () => {
+    if ( !fullName )
+    {
+      Alert.alert( 'Please enter your full name' )
+      return;
+    }
+
+    if ( !phone )
+    {
+      Alert.alert( 'Please enter your phone number' )
+      return;
+    }
+    console.warn( 'Success. Chekout' )
+  }
+
+  const validateAddress = () => {
+    if ( address.length < 3 )
+    {
+      setAddressError( 'Address is too short' )
+    }
+
+    if ( address.length > 30 )
+    {
+      setAddressError( 'Address is too long' )
+    }
+
+  }
 
   return (
     <View style={ styles.root }>
@@ -63,9 +93,16 @@ const AddressScreen = () => {
 
         <TextInput style={ styles.input } placeholder="Enter your address"
           value={ address }
-          onChangeText={ setAddress }
+          onChangeText={ text => {
+            setAddress( text )
+            setAddressError( '' )
+          }
+          }
+          onEndEditing={ validateAddress }
           keyboardType="default"
         />
+
+        { !!addressError && <Text style={ styles.errorLabel }>{ addressError }</Text> }
       </View>
 
       {/* City */ }
@@ -78,6 +115,7 @@ const AddressScreen = () => {
           keyboardType="default"
         />
       </View>
+      <Button text="Checkout" onPress={ onCheckout } />
     </View>
   )
 }
