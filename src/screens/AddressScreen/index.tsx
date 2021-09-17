@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Alert } from 'react-native';
+import { View, Text, TextInput, Alert, ScrollView, KeyboardAvoidingView } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import styles from '../AddressScreen/styles';
 import countryList from 'country-list'
@@ -60,7 +60,8 @@ const AddressScreen = () => {
   }
 
   return (
-    <View style={ styles.root }>
+
+    <ScrollView style={ styles.root }>
       {/* Country List */ }
       <View style={ styles.row }>
         <Text style={ styles.label }>Country</Text>
@@ -121,8 +122,9 @@ const AddressScreen = () => {
           keyboardType="default"
         />
       </View>
+
       <Button text="Checkout" onPress={ onCheckout } />
-    </View>
+    </ScrollView>
   )
 }
 
