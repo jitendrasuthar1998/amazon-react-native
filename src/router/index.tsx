@@ -1,14 +1,18 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
-import HomeScreen from '../screens/HomeScreen';
-import ShoppingCart from '../screens/ShoppingCartScreen/shoppingCart';
-import ProductScreen from '../screens/ProductScreen/ProductScreen';
+import BottomTabNav from './bottomTabNav';
+
+import { createStackNavigator } from '@react-navigation/stack';
+
+const Root = createStackNavigator();
 
 const Router = () => {
   return (
     <NavigationContainer>
-      <ProductScreen />
+      <Root.Navigator>
+        <Root.Screen component={ BottomTabNav } name="HomeTabs" />
+      </Root.Navigator>
     </NavigationContainer>
   )
 }

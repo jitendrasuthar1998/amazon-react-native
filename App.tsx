@@ -31,16 +31,18 @@ const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter, flex: 1
   };
 
+
+
   return (
-    <SafeAreaView style={ backgroundStyle }>
+    <View style={ backgroundStyle }>
       <StatusBar barStyle={ isDarkMode ? 'light-content' : 'dark-content' } />
       <View>
         <Router />
       </View>
-    </SafeAreaView>
+    </View>
   );
 };
 
