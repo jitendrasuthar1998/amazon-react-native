@@ -26,6 +26,12 @@ const AddressScreen = () => {
   console.log( phone )
 
   const onCheckout = () => {
+    if ( addressError )
+    {
+      Alert.alert( 'Fix all errors before submitting' )
+      return
+    }
+
     if ( !fullName )
     {
       Alert.alert( 'Please enter your full name' )
