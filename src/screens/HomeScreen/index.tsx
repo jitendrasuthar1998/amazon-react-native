@@ -9,8 +9,6 @@ import products from '../../data/products';
 
 const HomeScreen = () => {
 
-  console.warn( 'Home' );
-
   return (
     // Render product component
     <View style={ styles.page }>
@@ -25,9 +23,7 @@ const HomeScreen = () => {
 
 const styles = StyleSheet.create( {
   page: {
-    padding: 10,
-    flex: 1,
-    backgroundColor: 'red',
+    padding: 10
   }
 } )
 
