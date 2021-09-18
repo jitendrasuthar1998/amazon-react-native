@@ -12,7 +12,7 @@ const Tab = createBottomTabNavigator();
 
 const BottomTabNav = () => {
   return (
-    <Tab.Navigator screenOptions={ { tabBarShowLabel: false, tabBarActiveTintColor: 'blue', tabBarInactiveTintColor: 'grey' } }>
+    <Tab.Navigator screenOptions={ { headerShown: false, tabBarActiveTintColor: 'blue', tabBarInactiveTintColor: 'grey' } }>
       <Tab.Screen component={ HomeStack } name="Home"
         options={ {
           tabBarIcon: ( { color } ) => (

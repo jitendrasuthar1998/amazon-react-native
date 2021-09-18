@@ -1,46 +1,47 @@
 /* eslint-disable prettier/prettier */
 import { StyleSheet } from 'react-native';
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create( {
   container: {
     flexDirection: 'row',
     margin: 5,
     borderWidth: 1,
     borderColor: '#d1d1d1',
     borderRadius: 10,
-    backgroundColor:'#fff',
+    backgroundColor: '#fff',
   },
   productImage: {
-    flex: 2,
+    flex: 1,
+    justifyContent: 'center',
     height: 150,
-    resizeMode:'contain',
+    resizeMode: 'contain',
   },
   ratingContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginVertical:5,
+    marginVertical: 5,
   },
   star: {
-    margin:2,
+    margin: 2,
   },
   rightContainer: {
     padding: 10,
     //backgroundColor: 'red',
-    flex:3,
+    flex: 3,
   },
   title: {
-    fontSize: 18,
+    fontSize: 16,
     fontFamily: 'sans-serif',
   },
   price: {
-    fontSize:18,
-    fontWeight:'bold',
+    fontSize: 14,
+    fontWeight: 'bold',
   },
   oldprice: {
-    fontSize: 12,
+    fontSize: 10,
     fontWeight: 'normal',
-    textDecorationLine:'line-through',
+    textDecorationLine: 'line-through',
   },
-});
+} );
 
 export default styles;
