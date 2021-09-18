@@ -4,6 +4,7 @@ import { View, Text, ScrollView } from 'react-native';
 import styles from './styles';
 import product from '../../data/product';
 import { Picker } from '@react-native-picker/picker';
+import { useRoute } from '@react-navigation/native';
 import QuantitySelector from '../../components/QuantitySelector';
 import Button from '../../components/Button/button';
 import ImageCarousel from '../../components/ImageCarousel/ImageCarousel';
@@ -13,6 +14,10 @@ const ProductScreen = () => {
   const [ selectedOption, setSelectedOption ] = useState( product.options ? product.options[ 0 ] : null );
 
   const [ quantity, setQuantity ] = useState( 1 );
+
+  const route = useRoute();
+
+  console.log( route.params );
 
   // console.log(selectedOption);
   return (
