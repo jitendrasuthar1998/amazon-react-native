@@ -1,7 +1,7 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+
 import { NavigationContainer } from '@react-navigation/native';
-import BottomTabNav from './bottomTabNav';
+
 import HomeScreen from '../screens/HomeScreen';
 import { createStackNavigator } from '@react-navigation/stack';
 import ProductScreen from '../screens/ProductScreen/ProductScreen';
