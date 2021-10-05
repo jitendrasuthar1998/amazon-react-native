@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { View, Text, Image, Pressable, TouchableNativeFeedback } from 'react-native';
+import { View, Text, Image, Pressable } from 'react-native';
 import styles from './styles';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from '@react-navigation/native'

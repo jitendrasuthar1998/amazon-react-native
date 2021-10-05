@@ -13,14 +13,14 @@ const Tab = createBottomTabNavigator();
 const BottomTabNav = () => {
   return (
     <Tab.Navigator screenOptions={ { headerShown: false, tabBarActiveTintColor: 'blue', tabBarInactiveTintColor: 'grey' } }>
-      <Tab.Screen component={ HomeStack } name="Home"
+      <Tab.Screen component={ HomeStack } name="HomeStack"
         options={ {
           tabBarIcon: ( { color } ) => (
             <Entypo name="home" color={ color } size={ 19 } />
           )
         } }
       />
-      <Tab.Screen component={ HomeScreen } name="Product" options={ {
+      <Tab.Screen component={ HomeScreen } name="User" options={ {
         tabBarIcon: ( { color } ) => (
           <Entypo name="user" color={ color } size={ 19 } />
         )
