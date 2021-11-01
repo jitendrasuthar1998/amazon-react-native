@@ -6,14 +6,18 @@ const styles = StyleSheet.create( {
     flexDirection: 'row',
     margin: 5,
     borderWidth: 1,
+    justifyContent: "center",
     borderColor: '#d1d1d1',
     borderRadius: 10,
     backgroundColor: '#fff',
+    height: 130
   },
   productImage: {
     flex: 1,
-    justifyContent: 'center',
-    height: 150,
+    // width: 80,
+    // justifyContent: 'center',
+    alignItems: 'center',
+    // height: 100,
     resizeMode: 'contain',
   },
   ratingContainer: {

@@ -7,6 +7,7 @@ import ShoppingCartStack from './ShoppingCartStack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import Entypo from 'react-native-vector-icons/Entypo'
+
 const Tab = createBottomTabNavigator();
 
 const BottomTabNav = () => {

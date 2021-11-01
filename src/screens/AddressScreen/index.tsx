@@ -4,8 +4,11 @@ import { Picker } from '@react-native-picker/picker';
 import styles from '../AddressScreen/styles';
 import countryList from 'country-list'
 import Button from '../../components/Button/button';
+
 const countries = countryList.getData();
-console.log( countries )
+
+// console.log( countries )
+
 const AddressScreen = () => {
 
   const [ country, setCountry ] = useState( countries[ 0 ].code )
@@ -24,6 +27,8 @@ const AddressScreen = () => {
 
   console.log( fullName )
   console.log( phone )
+
+  // textInput validation on CheckOut
 
   const onCheckout = () => {
     if ( addressError )
@@ -46,6 +51,8 @@ const AddressScreen = () => {
     console.warn( 'Success. Chekout' )
   }
 
+  // validatiting address
+
   const validateAddress = () => {
     if ( address.length < 3 )
     {
@@ -56,7 +63,6 @@ const AddressScreen = () => {
     {
       setAddressError( 'Address is too long' )
     }
-
   }
 
   return (
@@ -123,7 +129,7 @@ const AddressScreen = () => {
         />
       </View>
 
-      <Button text="Checkout" onPress={ onCheckout } />
+      <Button text="Checkout" containerStyles={ { width: 90, height: 40, left: 120 } } onPress={ () => onCheckout } />
     </ScrollView>
   )
 }

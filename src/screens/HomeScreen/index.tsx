@@ -7,8 +7,8 @@ import ProductItem from '../../components/ProductItem/ProductComponent';
 
 import products from '../../data/products';
 
-const HomeScreen = () => {
-
+const HomeScreen = ( { searchValue }: { searchValue: string } ) => {
+  console.log( 'seachValue from HeaderComponent is == ', searchValue )
   return (
     // Render product component
     <View style={ styles.page }>
