@@ -12,7 +12,7 @@ const Stack = createStackNavigator();
 
 interface HeaderComponentProps {
   searchValue: string;
-  setSearchValue: () => Function;
+  setSearchValue: () => void;
 }
 
 const HeaderComponent = ( { searchValue, setSearchValue }: HeaderComponentProps ) => {
